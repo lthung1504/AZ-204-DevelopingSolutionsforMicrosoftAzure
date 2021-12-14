@@ -8,9 +8,9 @@ namespace func
     public static class Recurring
     {
         [FunctionName("Recurring")]
-        public static void Run([TimerTrigger("0 */5 * * * *")]TimerInfo myTimer, ILogger log)
+        public static void Run([TimerTrigger("*/5 * * * * *")]TimerInfo myTimer, ILogger log)
         {
-            log.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
+            log.LogInformation($"C# (5s) Timer trigger function executed at: {DateTime.Now}");
         }
     }
 }
